@@ -1,0 +1,23 @@
+package com.promineotech;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
+
+public class TestDemoJUnitTest {
+
+    private TestDemo testDemo;
+
+    @BeforeEach
+    public void setUp() {
+        testDemo = new TestDemo();
+    }
+
+    @Test
+    public void assertThatPairsOfPositiveNumbersAreAddedCorrectly() {
+        assertThat(testDemo.addPositive(4, 5)).isEqualTo(9);
+        assertThat(testDemo.addPositive(40, 50)).isEqualTo(90);
+        // Add more test cases as needed
+    }
+}
+
